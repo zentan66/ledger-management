@@ -22,6 +22,7 @@ module.exports = {
         extraFileExtensions: [".vue"]
     },
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "vue/multi-word-component-names": "off"
     }
 }

@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+import BaseHeader from '@/components/BaseHeader.vue'
+</script>
 <template>
-  <div>main</div>
+  <div>
+    <base-header></base-header>
+    <p>main</p>
+  </div>
 </template>

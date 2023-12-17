@@ -7,7 +7,15 @@ export default {
   theme: {
     extend: {
       padding: {
-        '1': '30px'
+        '1px': '12px',
+        '2px': '25px'
+      },
+      colors: {
+        theme: 'red',
+        blue: {
+          400: '#ddd',
+          500: '#f1f1f1'
+        }
       }
     },
   },

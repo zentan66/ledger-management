@@ -13,6 +13,7 @@
     "lint:style": "stylelint --fix 'src/**/*.{css,scss,less}' --cache"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
     "dayjs": "^1.11.10",
     "element-plus": "^2.4.2",
     "pinia": "^2.1.7",
@@ -28,6 +29,7 @@
     "eslint-plugin-vue": "^9.19.2",
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
+    "sass": "^1.69.5",
     "tailwindcss": "^3.3.5",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",

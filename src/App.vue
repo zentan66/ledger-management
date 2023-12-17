@@ -2,7 +2,6 @@
 export default {}
 </script>
 <template>
-  <div class="text-base">1231</div>
   <router-view></router-view>
 </template>
 <style scoped>
