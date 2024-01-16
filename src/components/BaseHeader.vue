@@ -5,11 +5,16 @@ import UserAvatar from './UserAvatar.vue'
   <header>
     <el-row align="middle" class="header-bar">
       <el-col :span="12">
-        <div class="">Ea Admin</div>
+        <div class="font-bold text-2xl pl-4">Ea Admin</div>
       </el-col>
-      <el-col :span="12" class="text-right pr-[12px]">
-        <i class="fa-solid fa-user"></i>
-        <i class="fa-solid fa-user"></i>
+      <el-col
+        :span="12"
+        class="pr-4 flex items-center justify-end text-gray-400"
+      >
+        <span class="cursor-pointer"><i class="fa-regular fa-globe"></i></span>
+        <div class="cursor-pointer mx-4">
+          <i class="fa-regular fa-bell"></i>
+        </div>
         <user-avatar></user-avatar>
       </el-col>
     </el-row>
@@ -18,7 +23,8 @@ import UserAvatar from './UserAvatar.vue'
 <style scoped lang="scss">
 header {
   background-color: #fff;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
   .header-bar {
     height: 55px;
   }

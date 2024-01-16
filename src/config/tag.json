@@ -1,0 +1,70 @@
+[
+    {
+        "label": "餐饮",
+        "value": "1"
+    },
+    {
+        "label": "购物",
+        "value": "2"
+    },
+    {
+        "label": "日用",
+        "value": "3"
+    },
+    {
+        "label": "交通",
+        "value": "4"
+    },
+    {
+        "label": "饮品",
+        "value": "5"
+    },
+    {
+        "label": "蔬菜",
+        "value": "6"
+    },
+    {
+        "label": "水果",
+        "value": "7"
+    },
+    {
+        "label": "零食",
+        "value": "8"
+    },
+    {
+        "label": "运动",
+        "value": "9"
+    },
+    {
+        "label": "娱乐",
+        "value": "10"
+    },
+    {
+        "label": "通讯",
+        "value": "11"
+    },
+    {
+        "label": "服饰",
+        "value": "12"
+    },
+    {
+        "label": "住房",
+        "value": "13"
+    },
+    {
+        "label": "居家",
+        "value": "14"
+    },
+    {
+        "label": "长辈",
+        "value": "15"
+    },
+    {
+        "label": "社交",
+        "value": "16"
+    },
+    {
+        "label": "旅行",
+        "value": "17"
+    }
+]

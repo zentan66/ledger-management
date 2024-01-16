@@ -1,5 +1,32 @@
 import * as VueRouter from 'vue-router'
 
+const mainPage = [
+  {
+    path: 'dashboard',
+    name: 'dashboard',
+    meta: { requireAuth: true },
+    component: () => import('@/views/dashboard/index.vue'),
+  },
+  {
+    path: 'tag-management',
+    name: 'tag',
+    meta: { requireAuth: true },
+    component: () => import('@/views/tag/index.vue'),
+  },
+  {
+    path: 'add-record',
+    name: 'add',
+    meta: { requireAuth: true },
+    component: () => import('@/views/add/index.vue'),
+  },
+  {
+    path: 'record-list',
+    name: 'recordList',
+    meta: { requireAuth: true },
+    component: () => import('@/views/list/RecordList.vue'),
+  },
+]
+
 const routes = [
   {
     path: '/login',
@@ -14,6 +41,13 @@ const routes = [
     meta: { requireAuth: true },
     component: () =>
       import(/* webpackChunkName: "introduce" */ '@/views/Main.vue'),
+    redirect: (to) => {
+      return {
+        path: 'dashboard',
+        query: { ...to.params },
+      }
+    },
+    children: mainPage,
   },
 ]
 

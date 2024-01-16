@@ -8,7 +8,8 @@ import avatar from '@/assets/images/avatar.jpg'
     </span>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
+        <el-dropdown-item>用户信息</el-dropdown-item>
+        <el-dropdown-item>退出</el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
