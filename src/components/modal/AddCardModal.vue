@@ -4,8 +4,8 @@ import tagJson from '@/config/tag.json'
 const props = defineProps({
   visible: {
     type: Boolean,
-    default: false,
-  },
+    default: false
+  }
 })
 const emit = defineEmits(['update:visible'])
 const modalVisible = computed({
@@ -14,7 +14,7 @@ const modalVisible = computed({
   },
   set(newValue) {
     emit('update:visible', newValue)
-  },
+  }
 })
 const form = reactive({
   date1: '',
@@ -23,7 +23,7 @@ const form = reactive({
   region: '',
   category: '',
   money: 0,
-  remark: '',
+  remark: ''
 })
 const onSubmit = () => {}
 const handleOk = () => {}

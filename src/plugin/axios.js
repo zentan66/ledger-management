@@ -2,14 +2,14 @@ import axios from 'axios'
 
 const request = axios.create({
   baseURL: '/',
-  timeout: 60000,
+  timeout: 60000
 })
 
-request.interceptors.request.use((config) => {
+request.interceptors.request.use(config => {
   return config
 })
 
-request.interceptors.response.use((res) => {
+request.interceptors.response.use(res => {
   switch (res.code) {
     case 401:
       //

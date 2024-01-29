@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import path from 'path'
+import path, { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -7,26 +7,36 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 
-// https://vitejs.dev/config/
+const pathResolve = (dir) => resolve(__dirname, '.', dir)
+
 export default defineConfig({
   plugins: [
     AutoImport({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({
+        importStyle: 'sass'
+      })]
     }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver({
+        importStyle: 'sass'
+      })]
     }),
-    vue(),
+    vue()
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   css: {
-    postcss: {
-      plugins: [tailwindcss, autoprefixer],
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@use "@/styles/index.scss" as *;`
+      }
     },
+    postcss: {
+      plugins: [tailwindcss, autoprefixer]
+    }
   },
-  server: {},
+  server: {}
 })

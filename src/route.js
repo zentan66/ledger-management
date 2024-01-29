@@ -5,26 +5,26 @@ const mainPage = [
     path: 'dashboard',
     name: 'dashboard',
     meta: { requireAuth: true },
-    component: () => import('@/views/dashboard/index.vue'),
+    component: () => import('@/views/dashboard/index.vue')
   },
   {
     path: 'tag-management',
     name: 'tag',
     meta: { requireAuth: true },
-    component: () => import('@/views/tag/index.vue'),
+    component: () => import('@/views/tag/index.vue')
   },
   {
     path: 'add-record',
     name: 'add',
     meta: { requireAuth: true },
-    component: () => import('@/views/add/index.vue'),
+    component: () => import('@/views/add/index.vue')
   },
   {
     path: 'record-list',
     name: 'recordList',
     meta: { requireAuth: true },
-    component: () => import('@/views/list/RecordList.vue'),
-  },
+    component: () => import('@/views/list/RecordList.vue')
+  }
 ]
 
 const routes = [
@@ -32,28 +32,26 @@ const routes = [
     path: '/login',
     name: 'login',
     meta: {},
-    component: () =>
-      import(/* webpackChunkName: "introduce" */ '@/views/Login.vue'),
+    component: () => import('@/views/Login.vue')
   },
   {
     path: '/',
     name: 'main',
     meta: { requireAuth: true },
-    component: () =>
-      import(/* webpackChunkName: "introduce" */ '@/views/Main.vue'),
-    redirect: (to) => {
+    component: () => import('@/views/Main.vue'),
+    redirect: to => {
       return {
         path: 'dashboard',
-        query: { ...to.params },
+        query: { ...to.params }
       }
     },
-    children: mainPage,
-  },
+    children: mainPage
+  }
 ]
 
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
-  routes,
+  routes
 })
 
 router.beforeEach((to, from, next) => {
